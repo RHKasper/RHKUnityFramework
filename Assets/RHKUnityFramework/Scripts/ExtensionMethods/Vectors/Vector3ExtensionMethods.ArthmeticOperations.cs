@@ -2,13 +2,10 @@ using UnityEngine;
 
 namespace RHKUnityFramework.Scripts.ExtensionMethods.Vectors
 {
-    public static class Vector3ExtensionMethods
+    public static partial class Vector3ExtensionMethods
     {
-        //========== Arithmetic Operations ============================================================================
-        
         /// <summary>
-        /// Multiplies Vector3 and Vector3Int component-wise. Functionally
-        /// equivalent to Vector3.Scale.
+        /// Multiplies Vector3 and Vector3Int component-wise.
         /// </summary>
         public static Vector3 Multiply(this Vector3 v1, Vector3Int v2)
         {
@@ -17,8 +14,7 @@ namespace RHKUnityFramework.Scripts.ExtensionMethods.Vectors
         }
         
         /// <summary>
-        /// Multiplies two Vector3s component-wise. Functionally equivalent to
-        /// Vector3.Scale.
+        /// Multiplies two Vector3s component-wise.
         /// </summary>
         public static Vector3 Multiply(this Vector3 v1, Vector3 v2)
         {
