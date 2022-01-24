@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using RHKUnityFramework.Scripts.ExtensionMethods.Vectors;
+using RHKUnityFramework.Scripts.ExtensionMethods.Vector3s;
 using UnityEditor;
 using UnityEngine;
 

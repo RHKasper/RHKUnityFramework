@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace RHKUnityFramework.Scripts.ExtensionMethods.Vectors
+namespace RHKUnityFramework.Scripts.ExtensionMethods.Vector3Ints
 {
-    public static class Vector3IntExtensionMethods
+    public static partial class Vector3IntExtensionMethods
     {
         
         /// <summary>

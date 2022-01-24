@@ -1,4 +1,4 @@
-using RHKUnityFramework.Scripts.ExtensionMethods.Vectors;
+using RHKUnityFramework.Scripts.ExtensionMethods.Vector3s;
 using UnityEngine;
 
 namespace RHKUnityFramework.Scripts.ExtensionMethods

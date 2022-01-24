@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace RHKUnityFramework.Scripts.ExtensionMethods.Vectors
+namespace RHKUnityFramework.Scripts.ExtensionMethods.Vector3s
 {
     public static partial class Vector3ExtensionMethods
     {
@@ -38,6 +38,14 @@ namespace RHKUnityFramework.Scripts.ExtensionMethods.Vectors
         {
             Vector3 retval = new Vector3(v1.x / v2.x, v1.y / v2.y, v1.z / v2.z);
             return retval;
+        }
+        
+        /// <summary>
+        /// Sums components of a Vector3.
+        /// </summary>
+        public static float Sum(this Vector3 v)
+        {
+            return v.x + v.y + v.z;
         }
     }
 }

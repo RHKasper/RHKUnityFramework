@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace RHKUnityFramework.Scripts.ExtensionMethods.Vectors
+namespace RHKUnityFramework.Scripts.ExtensionMethods.Vector2Extensions
 {
-    public static class Vector2ExtensionMethods 
+    public static partial class Vector2ExtensionMethods 
     {
         /// <summary>
         /// Multiplies two Vector2s component-wise by two floats.
