@@ -2,7 +2,7 @@
 using System.Globalization;
 using UnityEngine;
 
-namespace RHKUnityFramework.Scripts
+namespace RHKUnityFramework.Scripts.ExtensionMethods
 {
     public static class FloatExtensionMethods
     {

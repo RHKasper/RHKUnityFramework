@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RHKUnityFramework.Scripts
+namespace RHKUnityFramework.Scripts.ExtensionMethods
 {
     public static partial class IntExtensionMethods
     {
