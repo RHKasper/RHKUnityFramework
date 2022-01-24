@@ -49,5 +49,20 @@ namespace RHKUnityFramework.FrameworkManagement
 
             Debug.Log("Copied " + sourceDir + " to " + destinationDir);
         }
+        
+        /// <summary>
+        /// Retrieve list of names of all files nested within a directory.
+        /// </summary>
+        public static List<string> GetFilesRecursivelyInDirectory(this string directory)
+        {
+            List<string> files = new List<string>();
+            foreach (string dir in Directory.EnumerateDirectories(directory))
+            {
+                files.AddRange(GetFilesRecursivelyInDirectory(dir));
+            }
+
+            files.AddRange(Directory.EnumerateFiles(directory));
+            return files;
+        }
     }
 }

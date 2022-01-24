@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace RHKUnityFramework.Scripts.ExtensionMethods.Vector2Extensions
+namespace RHKUnityFramework.Scripts.ExtensionMethods.Vector2s
 {
     public static partial class Vector2ExtensionMethods 
     {
