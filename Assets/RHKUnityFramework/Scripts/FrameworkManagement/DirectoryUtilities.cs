@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
-namespace RHKUnityFramework.FrameworkManagement
+namespace RHKUnityFramework.Scripts.FrameworkManagement
 {
     public static class DirectoryUtilities
     {

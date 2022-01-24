@@ -4,7 +4,7 @@ using UnityEditor;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using RHKUnityFramework.FrameworkManagement;
+using RHKUnityFramework.Scripts.FrameworkManagement;
 using UnityEngine;
 using Object = UnityEngine.Object;
 

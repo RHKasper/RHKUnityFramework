@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace RHKUnityFramework.FrameworkManagement
+namespace RHKUnityFramework.Scripts.FrameworkManagement
 {
     public static class RhkFrameworkManagement
     {
