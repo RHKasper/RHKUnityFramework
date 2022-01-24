@@ -137,5 +137,21 @@ namespace RHKUnityFramework.Scripts.ExtensionMethods
             t.LookAt(2 * t.position - target.position, worldUp);
         }
         #endregion
+        
+        /// <summary>
+        /// Create bounding box that encapsulates all colliders on this Transform and its children. 
+        /// </summary>
+        public static Bounds MakeBoundingBoxForObjectColliders(this Transform rootObject, bool includeInactive = false)
+        {
+            return rootObject.gameObject.MakeBoundingBoxForObjectColliders(includeInactive);
+        }
+        
+        /// <summary>
+        /// Makes a bounding box that encapsulates every renderer on the "rootObject" and all of its children.
+        /// </summary>
+        public static Bounds MakeBoundingBoxForObjectRenderers(this Transform rootObject, bool includeInactive = false)
+        {
+            return rootObject.gameObject.MakeBoundingBoxForObjectRenderers(includeInactive);
+        }
     }
 }

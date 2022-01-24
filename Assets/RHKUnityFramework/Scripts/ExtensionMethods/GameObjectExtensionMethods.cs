@@ -109,5 +109,28 @@ namespace RHKUnityFramework.Scripts.ExtensionMethods
             //scale
             target.transform.localScale = newScale;
         }
+        
+        /// <summary>
+        /// Create bounding box that encapsulates all colliders on this GameObject and its children
+        /// </summary>
+        public static Bounds MakeBoundingBoxForObjectColliders(this GameObject rootObject, bool includeInactive = false)
+        {
+            Collider[] colliders = rootObject.GetComponentsInChildren<Collider>(includeInactive);
+            if (colliders.Length == 0)
+            {
+                return new Bounds(rootObject.transform.position, Vector3.zero);
+            }
+    
+            return colliders.MakeBoundingBox();
+        }
+        
+        /// <summary>
+        /// Makes a bounding box that encapsulates every renderer on the "rootObject" and all of its children.
+        /// </summary>
+        public static Bounds MakeBoundingBoxForObjectRenderers(this GameObject rootObject, bool includeInactive = false)
+        {
+            Renderer[] renderers = rootObject.GetComponentsInChildren<Renderer>(includeInactive);
+            return renderers.MakeBoundingBox();
+        }
     }
 }
