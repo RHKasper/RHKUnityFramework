@@ -16,20 +16,17 @@ namespace Synchronization.Editor
             
             DrawDefaultInspector();
             if (GUILayout.Button("Sync Framework To Project"))
-            {
                 foreach (Project project in projects)
-                {
                     project.Synchronize();
-                }
-            }
 
-            if (GUILayout.Button("Open Folder"))
-            {
+            
+            if (GUILayout.Button("Replace .gitignore file"))
                 foreach (Project project in projects)
-                {
+                    project.ReplaceGitIgnoreFile();
+            
+            if (GUILayout.Button("Open Folder"))
+                foreach (Project project in projects)
                     project.OpenFolder();
-                }
-            }
         }
     }
 }

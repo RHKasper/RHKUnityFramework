@@ -24,12 +24,21 @@ namespace Synchronization
             CopyDirectoryFromFrameworkToProject("RHKUnityFramework");
         }
 
+        public void ReplaceGitIgnoreFile()
+        {
+            string sourcePath = Path.Combine(DirectoryUtilities.UnityProjectFolder, ".gitignore");
+            string targetPath = Path.Combine(GetFullPath(),".gitignore");
+            
+            string contents = File.ReadAllText(sourcePath);
+            File.WriteAllText(targetPath, contents);
+            Debug.Log("Replaced " + targetPath + " with " + sourcePath);
+        }
+        
         public void OpenFolder()
         {
             System.Diagnostics.Process.Start("open", $"-R \"{GetFullPath()}\"");
         }
 
-        
         //========== Private Methods ==================================================================================
         private string GetFullPath()
         {
