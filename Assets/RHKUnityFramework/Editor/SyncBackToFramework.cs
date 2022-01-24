@@ -8,8 +8,6 @@ namespace RHKUnityFramework.Editor
 {
     public static partial class SyncBackToFramework
     {
-        private static string DasUnityFrameworkPathFromRepos => Path.Combine("DASUnityFramework","Assets", "DASUnityFramework");
-
         public static void SyncLocalChanges(string sourcePath, string targetPathFromReposFolder)
         {
             
@@ -36,13 +34,12 @@ namespace RHKUnityFramework.Editor
         
         
         [MenuItem("RHK Framework/Sync local changes to RHK Unity Framework")]
-        private static void SyncLocalChangesToDASUF()
+        private static void SyncLocalChangesToRHKUF()
         {
             if(RhkFrameworkManagement.IsRhkFrameworkProject)
-                throw new Exception("Can't copy from DAS Framework to itself");
+                throw new Exception("Can't copy from RHK Framework to itself");
             
-            string localRhkUnityFrameworkFolder = DirectoryUtilities.RhkUnityFrameworkFolder;
-            SyncLocalChanges(localRhkUnityFrameworkFolder, DasUnityFrameworkPathFromRepos);
+            SyncLocalChanges(DirectoryUtilities.LocalRhkUnityFrameworkFolder, DirectoryUtilities.RhkUnityFrameworkSourceFolder);
         }
 
         private static void LogDirectoryDoesNotExist(string path, bool throwException = false)

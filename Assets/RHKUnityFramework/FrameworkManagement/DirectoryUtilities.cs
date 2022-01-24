@@ -10,7 +10,8 @@ namespace RHKUnityFramework.FrameworkManagement
         public static string UnityAssetsFolder => Application.dataPath;
         public static string UnityProjectFolder => Path.GetFullPath(Path.Combine(UnityAssetsFolder, "../"));
         public static string OutsideUnityProjectFolder => Path.GetFullPath(Path.Combine(UnityProjectFolder, "../"));
-        public static string RhkUnityFrameworkFolder => Path.Combine(OutsideUnityProjectFolder, "RHKUnityFramework");
+        public static string RhkUnityFrameworkSourceFolder => Path.Combine(OutsideUnityProjectFolder, "RHKUnityFramework", "Assets", "RHKUnityFramework");
+        public static string LocalRhkUnityFrameworkFolder => Path.Combine(UnityAssetsFolder, "RHKUnityFramework");
 
 
         public static void ReplaceDirectory( string sourceDir, string destinationDir, HashSet<string> pathsToExclude = null)
