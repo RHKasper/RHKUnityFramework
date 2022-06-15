@@ -13,7 +13,7 @@ namespace RHKUnityFramework.Scripts.ExtensionMethods
 
         public static bool HasColor(this Material material, ShaderPropertyName propertyName)
         {
-            return material.HasColor(propertyName.GetShaderPropertyID());
+            return material.HasProperty(propertyName.GetShaderPropertyID());
         }
         
         /// <summary>

@@ -13,6 +13,11 @@ namespace RHKUnityFramework.Scripts.ExtensionMethods
         {
             return new Color(n.r / d.r, n.g / d.g, n.b / d.b, n.a / d.a);
         }
+        
+        public static Color Divide(this Color n, float d)
+        {
+            return new Color(n.r / d, n.g / d, n.b / d, n.a / d);
+        }
 
         /// <summary>
         /// This method returns the input color with each component modified such that, if it was zero, it will now be minValue.
